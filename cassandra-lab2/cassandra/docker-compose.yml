@@ -1,0 +1,12 @@
+services:
+  cassandra:
+    image: cassandra:latest
+    ports:
+      - '9042:9042'
+    healthcheck:
+      test: ["CMD", "cqlsh", "-e", "describe keyspaces"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+    volumes:
+      - ./data:/var/lib/cassandra
