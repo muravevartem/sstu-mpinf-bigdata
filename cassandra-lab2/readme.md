@@ -38,3 +38,4 @@ create table messenger.comment
 );
 ```
 - Заполнение данными
+

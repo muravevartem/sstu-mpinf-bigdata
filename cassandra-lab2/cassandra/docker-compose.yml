@@ -8,5 +8,3 @@ services:
       interval: 5s
       timeout: 5s
       retries: 60
-    volumes:
-      - ./data:/var/lib/cassandra
